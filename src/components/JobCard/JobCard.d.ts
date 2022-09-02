@@ -6,14 +6,10 @@ export interface JobCardData {
     languages?: string[];
     level?: string;
     location?: string;
-    logo?: string;
+    logo: string;
     new?: boolean;
     position?: string;
     postedAt?: string;
     role?: string;
     tools?: string[];
-}
-
-export interface jobData {
-    job: JobCardData;
 }

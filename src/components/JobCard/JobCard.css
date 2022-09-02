@@ -1,0 +1,5 @@
+.jobCardWrapper {
+    display: flex;
+    background-color: yellow;
+    margin: 10px;
+}

@@ -9,9 +9,8 @@ function App() {
   console.log(rawData)
   return (
     <>
-    <p>App</p>
     {rawData.map((job) => {
-      return <JobCard {...job}/>
+      return <JobCard {...job} key={job.id} />
     })}
     </>
   );
