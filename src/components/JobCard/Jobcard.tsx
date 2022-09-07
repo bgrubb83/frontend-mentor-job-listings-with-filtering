@@ -8,7 +8,12 @@ import JobDetails from '../JobDetails';
 
 const JobCard: React.FC<JobCardData> = (job) => {
     return (
-        <div className='jobCardWrapper'>
+        <div className={job.featured ? 'jobCardWrapper' : 'jobCardWrapper not-featured'}>
+            {/* Featured indicator */}
+            {job.featured ?
+            <section className='featured-indicator' />
+            : null}
+
             <CompanyLogo logo={job.logo} />
             <JobDetails
                 company={job.company}
