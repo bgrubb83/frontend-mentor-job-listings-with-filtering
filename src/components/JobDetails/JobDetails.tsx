@@ -8,7 +8,7 @@ import Pill from '../Pill';
 const JobDetails: React.FC<JobDetailsProps> = ({ company, new: isNew, featured, position, postedAt, contract, location }) => {
     return (
         <div className='jobDetailsWrapper'>
-            <section className='row top'>
+            <section className='row'>
                 <span className='company-name' >{company}</span>
                 {/* New Pill */}
                 {isNew ?
@@ -26,14 +26,16 @@ const JobDetails: React.FC<JobDetailsProps> = ({ company, new: isNew, featured, 
                     : null}
             </section>
 
-            <section className='row middle'>
-                <p>{position}</p>
+            <section className='row'>
+                <p className='role'>{position}</p>
             </section>
 
-            <section className='row bottom'>
-                <p>{postedAt}</p>
-                <p>{contract}</p>
-                <p>{location}</p>
+            <section className='row'>
+                <p className='job-stat'>{postedAt}</p>
+                <span className='bullet'>&#8226;</span>
+                <p className='job-stat'>{contract}</p>
+                <span className='bullet'>&#8226;</span>
+                <p className='job-stat'>{location}</p>
             </section>
 
         </div>

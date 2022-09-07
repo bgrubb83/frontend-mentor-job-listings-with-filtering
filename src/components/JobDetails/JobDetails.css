@@ -1,15 +1,14 @@
 .jobDetailsWrapper {
     display: flex;
     flex-direction: column;
-    background-color: aqua;
     width: 75%;
+    margin-left: 20px;
 }
 
 .row {
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: bisque;
     padding-top: 5px;
     padding-bottom: 5px;
 }
@@ -20,3 +19,22 @@
     font-weight: 700;
     font-size: 18px;
 }
+
+.role {
+    color: hsl(180, 14%, 20%);
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin: 0px;
+}
+
+.job-stat {
+    color: hsl(180, 8%, 52%);
+    font-size: 1.2em;
+    margin: 0px;
+}
+
+.bullet {
+    color: hsl(180, 8%, 52%);
+    margin-left: 8px;
+    margin-right: 8px;
+  }
