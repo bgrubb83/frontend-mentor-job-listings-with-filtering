@@ -1,0 +1,22 @@
+.jobDetailsWrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    width: 75%;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: bisque;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.company-name {
+    color: hsl(180, 29%, 50%);
+    padding-right: 10px;
+    font-weight: 700;
+    font-size: 18px;
+}

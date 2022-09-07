@@ -8,11 +8,11 @@ import JobCard from './components/JobCard'
 function App() {
   console.log(rawData)
   return (
-    <>
+    <div className='jobsListWrapper'>
     {rawData.map((job) => {
       return <JobCard {...job} key={job.id} />
     })}
-    </>
+    </div>
   );
 }
 

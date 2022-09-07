@@ -1,0 +1,29 @@
+.pill-wrapper {
+    display: flex;
+    align-items: center;
+    height: 24px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-right: 8px;
+    background-color: hsl(180, 29%, 50%);
+    border-radius: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+}
+
+.pill-wrapper p {
+    margin-bottom: 12px;
+}
+
+.dark {
+    background-color: hsl(180, 14%, 20%);
+}
+
+h1 {
+    color: hsl(180, 29%, 50%);
+    color: hsl(180, 52%, 96%);
+    color: hsl(180, 31%, 95%);
+    color: hsl(180, 8%, 52%);
+    color: hsl(180, 14%, 20%);
+}

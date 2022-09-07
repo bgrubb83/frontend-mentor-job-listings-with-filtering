@@ -4,9 +4,8 @@ import { CompanyLogoProps } from './CompanyLogo.d';
 import './CompanyLogo.css';
 
 const CompanyLogo: React.FC<CompanyLogoProps> = ({ logo }) => {
-    console.log(logo)
     return (
-        <img src={images[logo]} />
+        <img className='logo' src={images[logo]} />
     )
   }
 
