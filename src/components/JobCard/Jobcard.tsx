@@ -5,6 +5,7 @@ import './JobCard.css';
 
 import CompanyLogo from '../CompanyLogo';
 import JobDetails from '../JobDetails';
+import TagsList from '../TagsList';
 
 const JobCard: React.FC<JobCardData> = (job) => {
     return (
@@ -28,6 +29,10 @@ const JobCard: React.FC<JobCardData> = (job) => {
                 contract={job.contract}
                 location={job.location}
             />
+
+            {/* Tags List */}
+            <TagsList tags={job.tags} />
+
         </div>
     )
 }

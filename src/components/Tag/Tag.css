@@ -1,0 +1,22 @@
+.tag-wrapper {
+    display: flex;
+    align-items: center;
+    height: 32px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-right: 16px;
+    background-color: hsl(180, 52%, 96%);
+    border-radius: 4px;
+    font-weight: 700;
+    color: hsl(180, 29%, 50%);
+}
+
+.tag-wrapper:hover {
+    cursor: pointer;
+    color: hsl(180, 52%, 96%);
+    background-color: hsl(180, 29%, 50%);
+}
+
+.tag-wrapper p {
+    margin-bottom: 14px;
+}
