@@ -12,4 +12,5 @@ export interface JobCardData {
     postedAt: string;
     role: string;
     tools: string[];
+    tags?: string[];
 }
