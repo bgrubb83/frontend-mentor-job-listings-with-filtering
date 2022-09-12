@@ -17,4 +17,5 @@ export interface JobCardData {
 
 export interface JobData {
     job: JobCardData;
+    handleAddTag: (tag: string) => void;
 }

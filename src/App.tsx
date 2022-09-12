@@ -8,6 +8,10 @@ import { JobCardData, JobData } from './components/JobCard/JobCard.d'
 
 import processData from './helpers/processData';
 
+const handleAddTag = (tag: string): void => {
+  console.log(tag)
+}
+
 function App() {
   console.log(rawData)
   const processedData = processData(rawData);
@@ -15,7 +19,7 @@ function App() {
   return (
     <div className='jobsListWrapper'>
     {processedData.map((job: JobCardData) => {
-      return <JobCard job={job} key={job.id} />
+      return <JobCard job={job} handleAddTag={handleAddTag} key={job.id} />
     })}
     </div>
   );

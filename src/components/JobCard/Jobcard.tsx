@@ -7,7 +7,7 @@ import CompanyLogo from '../CompanyLogo';
 import JobDetails from '../JobDetails';
 import TagsList from '../TagsList';
 
-const JobCard: React.FC<JobData> = ({ job }) => {
+const JobCard: React.FC<JobData> = ({ job, handleAddTag }) => {
     return (
         <div className={job.featured ? 'jobCardWrapper' : 'jobCardWrapper not-featured'}>
             
@@ -31,7 +31,7 @@ const JobCard: React.FC<JobData> = ({ job }) => {
             />
 
             {/* Tags List */}
-            <TagsList tags={job.tags} />
+            <TagsList tags={job.tags} handleAddTag={handleAddTag} />
 
         </div>
     )
