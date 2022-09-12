@@ -14,3 +14,7 @@ export interface JobCardData {
     tools: string[];
     tags?: string[];
 }
+
+export interface JobData {
+    job: JobCardData;
+}

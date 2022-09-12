@@ -9,7 +9,7 @@ const TagsList: React.FC<TagsListData> = ({ tags }) => {
     return (
         <section className='tags-list-wrapper'>
             {tags && tags.map((tag) => {
-                return <Tag tag={tag} />
+                return <Tag tag={tag} key={tag} />
             })}
         </section>
     )

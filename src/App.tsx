@@ -4,7 +4,7 @@ import './App.css';
 import rawData from './dataStore/data.json';
 
 import JobCard from './components/JobCard';
-import { JobCardData } from './components/JobCard/JobCard.d'
+import { JobCardData, JobData } from './components/JobCard/JobCard.d'
 
 import processData from './helpers/processData';
 
@@ -15,7 +15,7 @@ function App() {
   return (
     <div className='jobsListWrapper'>
     {processedData.map((job: JobCardData) => {
-      return <JobCard {...job} key={job.id} />
+      return <JobCard job={job} key={job.id} />
     })}
     </div>
   );

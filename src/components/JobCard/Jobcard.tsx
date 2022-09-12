@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { JobCardData } from './JobCard.d'
+import { JobData } from './JobCard.d'
 import './JobCard.css';
 
 import CompanyLogo from '../CompanyLogo';
 import JobDetails from '../JobDetails';
 import TagsList from '../TagsList';
 
-const JobCard: React.FC<JobCardData> = (job) => {
+const JobCard: React.FC<JobData> = ({ job }) => {
     return (
         <div className={job.featured ? 'jobCardWrapper' : 'jobCardWrapper not-featured'}>
             
