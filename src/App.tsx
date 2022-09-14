@@ -7,7 +7,7 @@ import JobCard from './components/JobCard';
 import { JobCardData } from './components/JobCard/JobCard.d'
 
 import processData from './helpers/processData';
-
+import filterByTags from './helpers/filterByTags';
 
 function App() {
   const [tags, setTags] = useState<string[]>([]);
@@ -19,20 +19,11 @@ function App() {
       setTags(updatedTags);
     }
   }
-  
+
   let processedData = processData(rawData);
 
-  if (tags && tags.length) {
-    processedData = processedData.filter((job: JobCardData) => {
-      let tagged: boolean = true;
-      tags.forEach((tag: string) => {
-        if (!job.tags?.includes(tag)) {
-          tagged = false;
-        }
-      })
-      return tagged;
-    })
-  }
+  if (tags && tags.length) processedData = filterByTags(processedData, tags);
+
 
   return (
     <div className='jobsListWrapper'>
