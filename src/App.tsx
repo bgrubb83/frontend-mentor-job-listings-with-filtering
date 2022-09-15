@@ -21,6 +21,10 @@ function App() {
     }
   }
 
+  const handleClearTags = (): void => {
+    setTags([]);
+  }
+
   let processedData = processData(rawData);
 
   if (tags && tags.length) processedData = filterByTags(processedData, tags);
@@ -28,7 +32,7 @@ function App() {
 
   return (
     <div className='jobsListWrapper'>
-      {tags && tags.length ? <ActiveTagCard tags={tags} /> : null}
+      {tags && tags.length ? <ActiveTagCard tags={tags} handleClearTags={handleClearTags} /> : null}
       {processedData.map((job: JobCardData) => {
         return <JobCard job={job} handleAddTag={handleAddTag} key={job.id} />
       })}
