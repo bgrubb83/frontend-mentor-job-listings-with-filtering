@@ -28,7 +28,7 @@ function App() {
 
   return (
     <div className='jobsListWrapper'>
-      {tags && tags.length ? <ActiveTagCard /> : null}
+      {tags && tags.length ? <ActiveTagCard tags={tags} /> : null}
       {processedData.map((job: JobCardData) => {
         return <JobCard job={job} handleAddTag={handleAddTag} key={job.id} />
       })}
