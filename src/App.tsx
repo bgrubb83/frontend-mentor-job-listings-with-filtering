@@ -5,6 +5,7 @@ import rawData from './dataStore/data.json';
 
 import JobCard from './components/JobCard';
 import { JobCardData } from './components/JobCard/JobCard.d'
+import ActiveTagCard from './components/ActiveTagCard';
 
 import processData from './helpers/processData';
 import filterByTags from './helpers/filterByTags';
@@ -27,6 +28,7 @@ function App() {
 
   return (
     <div className='jobsListWrapper'>
+      {tags && tags.length ? <ActiveTagCard /> : null}
       {processedData.map((job: JobCardData) => {
         return <JobCard job={job} handleAddTag={handleAddTag} key={job.id} />
       })}
