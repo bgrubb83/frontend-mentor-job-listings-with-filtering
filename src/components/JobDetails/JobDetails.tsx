@@ -7,7 +7,7 @@ import Pill from '../Pill';
 
 const JobDetails: React.FC<JobDetailsProps> = ({ company, new: isNew, featured, position, postedAt, contract, location }) => {
     return (
-        <div className='jobDetailsWrapper'>
+        <div className='job-details-wrapper'>
             {/* Top row */}
             <section className='row'>
                 <span className='company-name' >{company}</span>

@@ -9,7 +9,7 @@ import TagsList from '../TagsList';
 
 const JobCard: React.FC<JobData> = ({ job, handleAddTag }) => {
     return (
-        <div className={job.featured ? 'jobCardWrapper' : 'jobCardWrapper not-featured'}>
+        <div className={job.featured ? 'job-card-wrapper' : 'job-card-wrapper not-featured'}>
             
             {/* Featured indicator */}
             {job.featured ?

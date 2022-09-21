@@ -13,6 +13,7 @@ import filterByTags from './helpers/filterByTags';
 function App() {
   const [tags, setTags] = useState<string[]>([]);
 
+  // Handle Adding a new tag
   const handleAddTag = (tag: string): void => {
     if (!tags.includes(tag)) {
       const updatedTags: string[] = [...tags];
@@ -21,6 +22,7 @@ function App() {
     }
   }
 
+  // handle Removing an active tag
   const handleRemoveTag = (tag: string): void => {
     let updatedTags: string[] = [...tags];
     updatedTags = updatedTags.filter((updatedTag) => {
@@ -29,17 +31,19 @@ function App() {
     setTags(updatedTags);
   }
 
+  // Handle clearing all active tags
   const handleClearTags = (): void => {
     setTags([]);
   }
 
+  // Format raw data
   let processedData = processData(rawData);
 
+  // If actice tags, filter jobs against them
   if (tags && tags.length) processedData = filterByTags(processedData, tags);
 
-
   return (
-    <div className='jobsListWrapper'>
+    <div className='jobs-list-wrapper'>
       {tags && tags.length ? <ActiveTagCard tags={tags} handleClearTags={handleClearTags} handleRemoveTag={handleRemoveTag} /> : null}
       {processedData.map((job: JobCardData) => {
         return <JobCard job={job} handleAddTag={handleAddTag} key={job.id} />
