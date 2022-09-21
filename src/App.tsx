@@ -21,7 +21,7 @@ function App() {
     }
   }
 
-  const handleRemoveTags = (tag: string): void => {
+  const handleRemoveTag = (tag: string): void => {
     let updatedTags: string[] = [...tags];
     updatedTags = updatedTags.filter((updatedTag) => {
       return updatedTag !== tag
@@ -40,7 +40,7 @@ function App() {
 
   return (
     <div className='jobsListWrapper'>
-      {tags && tags.length ? <ActiveTagCard tags={tags} handleClearTags={handleClearTags} handleRemoveTags={handleRemoveTags} /> : null}
+      {tags && tags.length ? <ActiveTagCard tags={tags} handleClearTags={handleClearTags} handleRemoveTag={handleRemoveTag} /> : null}
       {processedData.map((job: JobCardData) => {
         return <JobCard job={job} handleAddTag={handleAddTag} key={job.id} />
       })}
