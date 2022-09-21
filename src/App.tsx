@@ -21,6 +21,10 @@ function App() {
     }
   }
 
+  const handleRemoveTags = (tag: string): void => {
+    console.log('removing', tag);
+  }
+
   const handleClearTags = (): void => {
     setTags([]);
   }
@@ -32,7 +36,7 @@ function App() {
 
   return (
     <div className='jobsListWrapper'>
-      {tags && tags.length ? <ActiveTagCard tags={tags} handleClearTags={handleClearTags} /> : null}
+      {tags && tags.length ? <ActiveTagCard tags={tags} handleClearTags={handleClearTags} handleRemoveTags={handleRemoveTags} /> : null}
       {processedData.map((job: JobCardData) => {
         return <JobCard job={job} handleAddTag={handleAddTag} key={job.id} />
       })}

@@ -9,6 +9,8 @@ import photosnap from './photosnap.svg'
 import shortly from './shortly.svg'
 import airfilter from './the-air-filter-company.svg'
 
+import iconRemove from './icon-remove.svg';
+
 const logos: Record<string, any> = {
     './images/account.svg': account,
     './images/eyecam-co.svg': eyecam,
@@ -23,3 +25,5 @@ const logos: Record<string, any> = {
 }
 
 export default logos;
+
+export const remove = iconRemove;
