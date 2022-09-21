@@ -22,7 +22,11 @@ function App() {
   }
 
   const handleRemoveTags = (tag: string): void => {
-    console.log('removing', tag);
+    let updatedTags: string[] = [...tags];
+    updatedTags = updatedTags.filter((updatedTag) => {
+      return updatedTag !== tag
+    })
+    setTags(updatedTags);
   }
 
   const handleClearTags = (): void => {
