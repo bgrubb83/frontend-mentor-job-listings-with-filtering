@@ -5,16 +5,16 @@
     padding-left: 8px;
     padding-right: 8px;
     margin-right: 16px;
-    background-color: hsl(180, 52%, 96%);
+    background-color: var(--light-grayish-cyan-filter-tablets);
     border-radius: 4px;
     font-weight: 700;
-    color: hsl(180, 29%, 50%);
+    color: var(--desaturated-dark-cyan);
 }
 
 .tag-wrapper:hover {
     cursor: pointer;
-    color: hsl(180, 52%, 96%);
-    background-color: hsl(180, 29%, 50%);
+    color: var(--light-grayish-cyan-background);
+    background-color: var(--desaturated-dark-cyan);
 }
 
 .tag-wrapper p {

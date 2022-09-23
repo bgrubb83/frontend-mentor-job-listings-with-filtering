@@ -14,27 +14,27 @@
 }
 
 .company-name {
-    color: hsl(180, 29%, 50%);
+    color: var(--desaturated-dark-cyan);
     padding-right: 10px;
     font-weight: 700;
     font-size: 18px;
 }
 
 .role {
-    color: hsl(180, 14%, 20%);
+    color: var(--very-dark-grayish-cyan);
     font-weight: 700;
     font-size: 1.3rem;
     margin: 0px;
 }
 
 .job-stat {
-    color: hsl(180, 8%, 52%);
+    color: var(--dark-grayish-cyan);
     font-size: 1.2rem;
     margin: 0px;
 }
 
 .bullet {
-    color: hsl(180, 8%, 52%);
+    color: var(--dark-grayish-cyan);
     margin-left: 8px;
     margin-right: 8px;
   }

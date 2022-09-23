@@ -1,10 +1,10 @@
 .link-text {
-    color: hsl(180, 8%, 52%);
+    color: var(--dark-grayish-cyan);
     font-size: 1.1rem;
     cursor: pointer;
 }
 
 .link-text:hover {
-    color: hsl(180, 29%, 50%);
+    color: var(--desaturated-dark-cyan);
     text-decoration: underline;
 }
