@@ -1,8 +1,14 @@
 .active-tag-card-wrapper {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     background-color: #fff;
     border-radius: 4px;
     padding: 20px;
     margin: 24px;
+}
+
+.inner-tag-wrapper {
+    display: flex;
+    align-items: center;
 }

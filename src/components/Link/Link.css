@@ -1,0 +1,10 @@
+.link-text {
+    color: hsl(180, 8%, 52%);
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.link-text:hover {
+    color: hsl(180, 29%, 50%);
+    text-decoration: underline;
+}
