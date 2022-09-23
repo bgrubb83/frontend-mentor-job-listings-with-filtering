@@ -1,0 +1,8 @@
+.page-header {
+    height: 150px;
+    background-color: var(--desaturated-dark-cyan);
+    background-repeat: repeat-x;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}

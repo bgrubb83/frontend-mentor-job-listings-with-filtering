@@ -3,6 +3,7 @@ import './App.css';
 
 import rawData from './dataStore/data.json';
 
+import Header from './components/Header';
 import JobCard from './components/JobCard';
 import { JobCardData } from './components/JobCard/JobCard.d'
 import ActiveTagCard from './components/ActiveTagCard';
@@ -43,12 +44,15 @@ function App() {
   if (tags && tags.length) processedData = filterByTags(processedData, tags);
 
   return (
-    <div className='jobs-list-wrapper'>
-      {tags && tags.length ? <ActiveTagCard tags={tags} handleClearTags={handleClearTags} handleRemoveTag={handleRemoveTag} /> : null}
-      {processedData.map((job: JobCardData) => {
-        return <JobCard job={job} handleAddTag={handleAddTag} key={job.id} />
-      })}
-    </div>
+    <>
+      <Header />
+      <section className= {tags && tags.length ? 'jobs-list-wrapper' : 'jobs-list-wrapper extra-padding'}>
+        {tags && tags.length ? <ActiveTagCard tags={tags} handleClearTags={handleClearTags} handleRemoveTag={handleRemoveTag} /> : null}
+        {processedData.map((job: JobCardData) => {
+          return <JobCard job={job} handleAddTag={handleAddTag} key={job.id} />
+        })}
+      </section>
+    </>
   );
 }
 
