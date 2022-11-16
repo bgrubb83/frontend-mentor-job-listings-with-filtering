@@ -17,6 +17,10 @@
     -0.2px 15.8px 18.7px -2.1px hsl(var(--shadow-color) / 0.22);
 }
 
+html {
+  overflow-y: scroll;
+}
+
 *,
 *::before,
 *::after {
